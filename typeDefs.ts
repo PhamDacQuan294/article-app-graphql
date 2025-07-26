@@ -15,7 +15,7 @@ export const typeDefs = gql`
     avatar: String
   }
 
-  type Query { # Để lấy ra
+  type Query { 
     hello: String,
     getListArticle: [Article],
     getArticle(id: ID): Article
@@ -27,7 +27,8 @@ export const typeDefs = gql`
   input ArticleInput {
     title: String,
     avatar: String,
-    description: String
+    description: String,
+    categoryId: String
   }
 
   input CategoryInput {
@@ -35,7 +36,7 @@ export const typeDefs = gql`
     avatar: String,
   }
 
-  type Mutation { #Chỉnh sửa thì viết vào đây thêm sửa xoá..
+  type Mutation { 
     createArticle(article: ArticleInput): Article,
     deleteArticle(id: ID): String,
     updateArticle(id: ID, article: ArticleInput): Article,
