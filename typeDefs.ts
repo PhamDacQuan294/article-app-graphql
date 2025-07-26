@@ -21,6 +21,7 @@ export const typeDefs = gql`
   }
 
   type Mutation { #Chỉnh sửa thì viết vào đây thêm sửa xoá..
-    createArticle(article: ArticleInput): Article
+    createArticle(article: ArticleInput): Article,
+    deleteArticle(id: ID): String
   }
 `;
